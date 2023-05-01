@@ -15,6 +15,9 @@
 # limitations under the License.
 #
 
+# Assertions
+TARGET_OTA_ASSERT_DEVICE := shamu,shamu_t
+
 # Architecture
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
@@ -32,8 +35,8 @@ TARGET_USES_64_BIT_BINDER := true
 
 # Bluetooth defines
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/moto/shamu/bluetooth
-BOARD_CUSTOM_BT_CONFIG := device/moto/shamu/bluetooth/vnd_shamu.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/moto/shamu_t/bluetooth
+BOARD_CUSTOM_BT_CONFIG := device/moto/shamu_t/bluetooth/vnd_shamu.txt
 
 # Board
 TARGET_NO_BOOTLOADER := true
@@ -73,7 +76,7 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16793600
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2147483648
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 25253773312
 TARGET_USERIMAGES_USE_EXT4 := true
-TARGET_FS_CONFIG_GEN += device/moto/shamu/config.fs
+TARGET_FS_CONFIG_GEN += device/moto/shamu_t/config.fs
 
 # GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
@@ -104,7 +107,7 @@ TARGET_KERNEL_CONFIG := shamu_t_defconfig
 TARGET_KERNEL_SOURCE := kernel/moto/shamu_t
 
 # Manifests
-DEVICE_MANIFEST_FILE := device/moto/shamu/manifest.xml
+DEVICE_MANIFEST_FILE := device/moto/shamu_t/manifest.xml
 
 # Memfd
 TARGET_HAS_MEMFD_BACKPORT := true
@@ -118,14 +121,14 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/bus/i2c/devices/1-004a/tsp"
 
 # Recovery
 BOARD_RAMDISK_USE_XZ := true
-TARGET_RECOVERY_FSTAB = device/moto/shamu/rootdir/etc/fstab.shamu
+TARGET_RECOVERY_FSTAB = device/moto/shamu_t/rootdir/etc/fstab.shamu
 
 # RIL
 # Support Native Layer RF cutback
 BOARD_USES_CUTBACK_IN_RILD := true
 
 # Selinux
-BOARD_VENDOR_SEPOLICY_DIRS += device/moto/shamu/sepolicy
+BOARD_VENDOR_SEPOLICY_DIRS += device/moto/shamu_t/sepolicy
 SELINUX_IGNORE_NEVERALLOWS := true
 
 # Shims
@@ -145,4 +148,4 @@ WIFI_DRIVER_FW_PATH_STA     := "/vendor/firmware/fw_bcmdhd.bin"
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION      := VER_0_8_X
 
--include vendor/motorola/shamu/BoardConfigVendor.mk
+-include vendor/motorola/shamu_t/BoardConfigVendor.mk

@@ -4,7 +4,7 @@
     "target_path": "hardware/sony/timekeep"
   },
   {
-    "repository": "android_kernel_moto_shamu",
-    "target_path": "kernel/moto/shamu"
+    "repository": "android_kernel_moto_shamu_t",
+    "target_path": "kernel/moto/shamu_t"
   }
 ]

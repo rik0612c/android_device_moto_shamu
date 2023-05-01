@@ -19,7 +19,7 @@ TARGET_SCREEN_WIDTH := 1440
 TARGET_BOOTANIMATION_HALF_RES := true
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_mini_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
@@ -28,17 +28,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Inherit proprietary files
-$(call inherit-product, vendor/motorola/shamu/shamu-vendor.mk)
+$(call inherit-product, vendor/motorola/shamu_t/shamu_t-vendor.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_shamu
-PRODUCT_DEVICE := shamu
-PRODUCT_BRAND := google
-PRODUCT_MODEL := Nexus 6
+PRODUCT_NAME := lineage_shamu_t
+PRODUCT_DEVICE := shamu_t
+PRODUCT_BRAND := motorola
+PRODUCT_MODEL := Moto X Pro
 PRODUCT_MANUFACTURER := motorola
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=shamu \
-    PRIVATE_BUILD_DESC="shamu-user 7.1.1 N6F27M 4299435 release-keys"
-
-BUILD_FINGERPRINT := google/shamu/shamu:7.1.1/N6F27M/4299435:user/release-keys
+    PRODUCT_NAME=shamu_t
